@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <form action="/items" method="get">
+        <a href="/items?items={{i}}" name="items" class="btn btn-primary">Items</a>
+    </form>
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="form-group">請選擇欲找的資料</div>
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-sm-12" style="text-align:left;">
+                    <div class="form-group">
+                        <div class="form-check form-check-inline" id="chk_0">
+                            <label class="form-check-label">
+                                <input class="form-check-input" data-sval="0" type="radio" name="exampleRadios1" id="radPetType0" value="0" data-gtm-form-interact-field-id="1">
+                            "狗"<span class="circle"><span class="check"></span>
+                        </label>
+                        </div>
+                        <div class="form-check form-check-inline" id="chk_1">
+                            <label class="form-check-label">
+                                <input class="form-check-input" data-sval="1" type="radio" name="exampleRadios1" id="radPetType1" value="1" data-gtm-form-interact-field-id="0">
+                            "貓"<span class="circle"><span class="check"></span>
+                        </label>
+                        </div>
+                        <div class="form-check form-check-inline" id="chk_0">
+                            <label class="form-check-label">
+                                <input class="form-check-input" data-sval="0" type="radio" name="exampleRadios1" id="radPetType0" value="0" data-gtm-form-interact-field-id="1">
+                            "其他"<span class="circle"><span class="check"></span>
+                        </label>
+                        </div>
+                        <select name="form-select" id="cobVariety" class="form-select">
+                            <option value>選擇品種/狗</option>
+                            <option value="56">混種犬</option>
+                            <option value="277">拉不拉多貴賓犬</option>
+                            <option value="194">瑪爾貴賓混種犬</option>
+                            <option value="37">瑪爾濟斯犬</option>
+                            <option value="42">博美犬</option>
+                            <option value="230">狐狸博美</option>
+                            <option value="34">柴犬</option>
+                            <option value="55">臘腸犬</option>
+                            <option value="175">長毛臘腸</option>
+                            <option value="14">吉娃娃犬</option>
+                            <option value="178">長毛吉娃娃犬</option>
+                            <option value="13">台灣犬</option>
+                            <option value="31">約克夏</option>
+                            <option value="17">西施犬</option>
+                            <option value="41">迷你雪納瑞</option>
+                            <option value="40">大型雪納瑞</option>
+                            <option value="46">黃金獵犬</option>
+                            <option value="291">雪納瑞</option>
+                            <option value="16">米格魯</option>
+                            <option value="21">拉不拉多犬</option>
+                            <option value="27">哈士奇(西伯利亞雪橇犬)</option>
+                            <option value="121">法國鬥牛犬</option>
+                            <option value="107">威爾斯柯基犬</option>
+                            <option value="81">日本狐狸犬</option>
+                            <option value="39">鬥牛犬(英國)</option>
+                            <option value="48">德國狼犬(德國牧羊犬)</option>
+                            <option value="43">喜樂蒂牧羊犬</option>
+                            <option value="7">比熊犬</option>
+                            <option value="32">英國古代牧羊犬</option>
+                            <option value="25">邊境牧羊犬</option>
+                            <option value="195">哈瓦那犬</option>
+                            <option value="266">可卡臘犬</option>
+                            <option value="10">可卡犬(美系)</option>
+                            <option value="105">澳洲牧羊犬</option>
+                            <option value="11">可卡犬(英系)</option>
+                            <option value="160">比利時牧羊犬(格羅安達/瑪利諾/坦比連)</option>
+                            <option value="35">迷你品(迷你杜賓)</option>
+                            <option value="167">可麗牧羊犬(蘇格蘭牧羊犬)</option>
+                            <option value="197">中亞牧羊犬</option>
+                            <option value="5">巴哥犬</option>
+                            <option value="198">馬瑞馬牧羊犬</option>
+                            <option value="242">加泰隆尼亞牧羊犬</option>
+                            <option value="280">迷你美國牧羊犬</option>
+                            <option value="104">邊境㹴</option>
+                            <option value="257">德國剛毛指示犬</option>
+                            <option value="30">秋田犬</option>
+                            <option value="205">美系秋田犬</option>
+                            <option value="54">鬆獅犬</option>
+                            <option value="18">西高地白㹴</option>
+                            <option value="3">大麥町</option>
+                            <option value="319">諾福克㹴</option>
+                            <option value="9">北京犬</option>
+                            <option value="51">獒犬</option>
+                            <option value="19">杜賓犬</option>
+                            <option value="29">洛威納犬(羅威那犬)</option>
+                            <option value="109">傑克羅素㹴</option>
+                            <option value="22">拉薩犬</option>
+                            <option value="6">日本狆</option>
+                            <option value="50">蝴蝶犬</option>
+                            <option value="8">牛頭㹴</option>
+                            <option value="23">波士頓㹴</option>
+                            <option value="20">沙皮犬</option>
+                            <option value="203">英國獵狐犬</option>
+                            <option value="53">獵狐㹴</option>
+                            <option value="12">史必茲(史畢諾犬)</option>
+                            <option value="323">阿茲卡爾</option>
+                            <option value="4">巴吉度犬</option>
+                            <option value="155">高山犬</option>
+                            <option value="183">騎士比熊</option>
+                            <option value="185">喜樂蒂柯基</option>
+                            <option value="186">奧斯卡貴賓犬</option>
+                            <option value="228">黃金貴賓犬</option>
+                            <option value="28">查理士犬</option>
+                            <option value="158">美國惡霸犬</option>
+                            <option value="258">標準貴賓犬</option>
+                            <option value="259">迷你貴賓犬</option>
+                            <option value="44">惠比特犬</option>
+                            <option value="260">玩具貴賓犬</option>
+                            <option value="33">拳師犬</option>
+
+                            
+
+
+
+
+
+
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function bindChk(idx) {
+                $("#chk_" + idx).empty();
+                var chkName = "";
+                switch (idx) {
+                    case "0":
+                        chkName = "犬";
+                        break;
+                    case "1":
+                        chkName = "貓";
+                        break;
+                    case "O":
+                        chkName = "其他";
+                        break;
+                }
+                var chkHtml = '<label class="form-check-label"><input class="form-check-input" data-sVal ="' + idx + '" type="radio" name="exampleRadios1"';
+                chkHtml += ' id="radPetType' + idx + '" value="' + idx + '">' + chkName + '<span class="circle"><span class="check"></span></span></label>';
+                $("#chk_" + idx).append(chkHtml);
+
+                $('#radPetType' + idx).click(function () {
+                    if (_sval == this.dataset.sval) {
+                        _sval = "";
+                        $("#cobVariety").empty();
+                        $("#cobVariety").append("<option value='' selected>選擇品種/物種</option>");
+                        bindChk(this.dataset.sval);
+                    } else {
+                        _sval = this.dataset.sval;
+                        radPetType(_sval);
+                    }
+                })
+            }
+
+    </script>
+</body>
+
+</html>
