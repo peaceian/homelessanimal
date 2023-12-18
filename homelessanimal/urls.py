@@ -27,7 +27,7 @@ from django.contrib.staticfiles.storage import staticfiles_storage
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('hello/<str:username>',views.Sayhello),
-    path('animalpage/',animalpage),
+    path('animalpage/',animalpage),#main page
     path('animalpage/<pageindex>/',animalpage),
     path('animal/<int:animal_id>/',animal),#define the addr and function()
     path('animals/',crawlerall),
