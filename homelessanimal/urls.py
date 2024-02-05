@@ -34,6 +34,7 @@ urlpatterns = [
     re_path(r'animalpage/(\d+)/$',views.animalpage,name="index"),
     #path('filter/',views.filter), #要導入 re_path 套件
     path('animalpage/',search),
+    path('',animalpage),
    
     
 ]
