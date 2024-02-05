@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,31 +21,37 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-v-z49(&+08$r3!p_$*pd-0bg%)#yj!-%jf^agrk*)8tltznu5!'
+SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-v-z49(&+08$r3!p_$*pd-0bg%)#yj!-%jf^agrk*)8tltznu5!')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False #for render.com
+DEBUG = 'RENDER' not in os.environ
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
-ALLOWED_HOSTS = []
-
-
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+#for onrender.com
 # Application definition
 
 INSTALLED_APPS = [
+    "whitenoise.runserver_nostatic",#whitenoise,while depolying using
+    'animalapp.apps.AnimalappConfig',#for render.com
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'animalapp',#added app
-    'reverse',
-    'django_filters',
+    #'animalapp',#added app
+    #'reverse',
+    #'django_filters',
 
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -109,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'zh-hant'
 
-TIME_ZONE = 'Asia/Taipei'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -119,13 +126,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 #Method 1
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']#add base_dir path
+STATIC_URL = '/static/'#default
+STATICFILES_DIRS = [BASE_DIR / 'static']#add base_dir path #default
 # Method 2
-# STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+#STATICFILES_DIRS = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_ROOT = ''
 
-STATICFILES_DIRS = ('static',)
+#STATICFILES_DIRS = ('static',)#default
+
+STORAGE = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    #"staticfiles": {
+    #    "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    #},
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 
 # Default primary key field type
