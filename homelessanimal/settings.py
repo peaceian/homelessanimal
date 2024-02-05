@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-v-z49(&+08$r3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False #for render.com
 DEBUG = 'RENDER' not in os.environ
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','homelessanimal.onrender.com']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -127,10 +127,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 #Method 1
 STATIC_URL = '/static/'#default
-STATICFILES_DIRS = [BASE_DIR / 'static']#add base_dir path #default
+STATICFILES_DIRS = [BASE_DIR / '/static/']#add base_dir path #default
 # Method 2
-#STATICFILES_DIRS = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATIC_ROOT = ''
 
 #STATICFILES_DIRS = ('static',)#default
 
