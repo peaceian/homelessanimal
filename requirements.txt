@@ -12,27 +12,20 @@ crashtest==0.4.1
 cryptography==41.0.7
 distlib==0.3.7
 Django==4.2.7
-django-filter==23.5
 dulwich==0.21.7
-dunamai @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/dunamai_1699481281137/work
 fastjsonschema==2.19.0
 filelock==3.13.1
-gunicorn==21.2.0
 idna==3.4
 installer==0.7.0
 jaraco.classes==3.3.0
-Jinja2 @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/jinja2_1699476363736/work
 keyring==24.3.0
-MarkupSafe @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/markupsafe_1699475011847/work
 more-itertools==10.1.0
 msgpack==1.0.7
-packaging @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/packaging_1699472459356/work
 pexpect==4.9.0
 pkginfo==1.9.6
 platformdirs==3.11.0
 poetry==1.7.1
 poetry-core==1.8.1
-poetry-dynamic-versioning @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/poetry-dynamic-versioning_1699495450812/work
 poetry-plugin-export==1.6.0
 ptyprocess==0.7.0
 pycparser==2.21
@@ -44,15 +37,14 @@ rapidfuzz==3.5.2
 render==1.0.0
 requests==2.31.0
 requests-toolbelt==1.0.0
-reverse==0.1.0
 setuptools==68.0.0
 shellingham==1.5.4
 soupsieve==2.5
 sqlparse==0.4.4
-tomlkit @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/tomlkit_1699475633229/work
 trove-classifiers==2023.11.29
 tzdata==2023.3
 urllib3==2.1.0
 virtualenv==20.25.0
 wheel==0.41.2
 whitenoise==6.6.0
+gunicorn==21.0.1
