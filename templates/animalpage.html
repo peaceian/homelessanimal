@@ -4,42 +4,43 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <title>流浪動物清單</title>
-</head>
 
 <body>
     <div class="container-fluid">
-        
-    <table class="table table-striped table-dark text-lg-center table-hover table-responsive">
-        <th>實際所在地</th>
-        <!--<th>動物的類型</th>-->
-        <th>性別</th>
-        <!--<th>動物體型</th>-->
-        <!--<th>動物年紀</th>-->
-        <th>圖片(click)</th>
-        <th style="width: 100px;">更新日期</th>
-        <th>所屬收容所</th>
-        <th style="width: 300px;">地址</th>
-        <th>連絡電話</th>
 
-        {% for i in jds %} <!-- #jds為json所有資料 i則是現在建立用來遞迴的變數 -->
-        <tr>
-            <td>{{i.animal_place}}</td> <!-- #Django Template 語言 使用'.' 來顯示子項目 -->
-            <!--<td>{{i.animal_kind}}</td>-->
-            <td>{{i.animal_sex}}</td>
-            <!--<td>{{i.animal_bodytype}}</td>-->
-            <!--<td>{{i.animal_age}}</td>-->
-            <td><a href="/animal/{{i.animal_id}}" target="_blank"><img src="{{i.album_file}}" width="150" height="150" class="rounded-3 infomation"
-                        style="object-fit:cover;"></a></td>
-            <td>{{i.animal_update}}</td>
-            <td>{{i.shelter_name}}</td>
-            <td>{{i.shelter_address}}</td>
-            <td>{{i.shelter_tel}}</td>
-        </tr>
-        {% endfor %}
-    </table>
+
+        <div class="row">
+            <div class="column">
+                <div class="title title-place">實際所在地</div>
+                <!--<p>動物的類型</p>-->
+                <div class="title title-sex">性別</div>
+                <!--<th>動物體型</th>-->
+                <!--<th>動物年紀</th>-->
+                <div class="title title-information">圖片(click)</div>
+                <div class="title title-update">更新日期</div>
+                <div class="title title-shelter_name">所屬收容所</div>
+                <div class="title title-shelter_address">地址</div>
+                <div class="title title-shelter_tel">連絡電話</div>
+            </div>
+
+            {% for i in jds %} <!-- #jds為json所有資料 i則是現在建立用來遞迴的變數 -->
+            <div class="column">
+                <div class="place data">{{i.animal_place}}</div> <!-- #Django Template 語言 使用'.' dict of items -->
+                <!--<p>{{i.animal_kind}}</p>-->
+                <div class="sex data">{{i.animal_sex}}</div>
+                <!--<p>{{i.animal_bodytype}}</p>-->
+                <!--<p>{{i.animal_age}}</p>-->
+                <div class="information data"><a href="/animal/{{i.animal_id}}" target="_blank"><img src="{{i.album_file}}" class="img"></a>
+                </div>
+                <div class="update data">{{i.animal_update}}</div>
+                <div class="shelter_name data">{{i.shelter_name}}</div>
+                <div class="shelter_address">{{i.shelter_address}}</div>
+                <div class="shelter_tel data">{{i.shelter_tel}}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
     </div>
     <br>
     <h3>
@@ -48,8 +49,7 @@
             <a class="btn pagechange" href="/animalpage/1/" title="上一頁">上一頁</a>
             {% endif %}
             　　-- {{currentpage}} --　　
-            {% if currentpage < totpage %} 
-            <a class="btn pagechange" href="/animalpage/2/" title="下一頁">下一頁</a>
+            {% if currentpage < totpage %} <a class="btn pagechange" href="/animalpage/2/" title="下一頁">下一頁</a>
                 {% endif %}
         </div>
     </h3>

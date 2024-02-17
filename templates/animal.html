@@ -1,41 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal information</title>
-</head>
+
+{% block extrahead %}
+<title>收容動物詳細資料</title>
+{% endblock %}
 
 <body>
-    {% extends "base.html" %}
-    {% load static %}
-    {% block content %}
     <div class="container-lg">
         <!--{ for i in jd|slice:":1" }-->
         <!--{% for i in jd }-->
         <!--{ if forloop.counter < 2 }-->
-        <div class="card broad text-center" aria-hidden="true">
-            <h2 class=" text-bg-light text-center placeholder-glow p-3 fw-bolder">流浪動物卡</h5>
-            <img src="{{i.album_file}}" class="card-img-top rounded-3 img-fluid mx-5 my-5"
-                style="width: 1200px; height:1000px;object-fit: cover;">
-            <div class="card-body text-center mx-5 mb-3">
-                <p class="card-text type">ID：{{i.animal_id}}</p>
-                <p class="card-text type">收容編號：{{i.animal_subid}}</p>
-                <p class="card-text type">絕育：{{i.animal_sterilization}}</p>
-                
-                <p class="card-text type">實際所在地：{{i.animal_place}}</p>
-                <p class="card-text type">動物類型： {{i.animal_kind}}</p>
-                <p class="card-text type">動物品種： {{i.animal_Variety}}</p>
-                <p class="card-text type">動物性別： {{i.animal_sex}} </p>
-                <p class="card-text type">動物體型： {{i.animal_bodytype}} </p>
-                <p class="card-text type">動物毛色：{{i.animal_colour}} </p>
-                <p class="card-text type">動物年紀： {{i.animal_age}} </p>
-                <p class="card-text type">發現地點：{{i.animal_foundplace}}</p>
-                <p class="card-text type">所屬收容所：{{i.shelter_name}}</p>
-                <p class="card-text type">收容地址：{{i.shelter_address}} </p>
-                <p class="card-text type">聯絡電話：{{i.shelter_tel}} </p>
-            </div>
+        <div class="card text-center broad" aria-hidden="true">
+            <h2 class="card text-bg-light text-center placeholder-glow p-3 fw-bolder">{{i.animal_Variety}}</h2>
+                <img src="{{i.album_file}}" class="card-img-top cardimg">
+                <div class="card-body text-center mx-4 my-3">
+                    <p class="card-text type">ID：{{i.animal_id}}</p>
+                    <p class="card-text type">收容編號：{{i.animal_subid}}</p>
+                    <p class="card-text type">絕育：{{i.animal_sterilization}}</p>
+
+                    <p class="card-text type">實際所在地：{{i.animal_place}}</p>
+                    <p class="card-text type">動物類型： {{i.animal_kind}}</p>
+                    <p class="card-text type">動物品種： {{i.animal_Variety}}</p>
+                    <p class="card-text type">動物性別： {{i.animal_sex}} </p>
+                    <p class="card-text type">動物體型： {{i.animal_bodytype}} </p>
+                    <p class="card-text type">動物毛色：{{i.animal_colour}} </p>
+                    <p class="card-text type">動物年紀： {{i.animal_age}} </p>
+                    <p class="card-text type">發現地點：{{i.animal_foundplace}}</p>
+                    <p class="card-text type">所屬收容所：{{i.shelter_name}}</p>
+                    <p class="card-text type">收容地址：{{i.shelter_address}} </p>
+                    <p class="card-text type">聯絡電話：{{i.shelter_tel}} </p>
+                </div>
         </div>
 
 

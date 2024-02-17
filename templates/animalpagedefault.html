@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+
+<body>
+    <div class="container-fluid">
+
+        <table class="">
+            <th>實際所在地</th>
+            <!--<th>動物的類型</th>-->
+            <th>性別</th>
+            <!--<th>動物體型</th>-->
+            <!--<th>動物年紀</th>-->
+            <th>圖片(click)</th>
+            <th style="width: 100px;">更新日期</th>
+            <th>所屬收容所</th>
+            <th style="width: 300px;">地址</th>
+            <th>連絡電話</th>
+
+            {% for i in jds %} <!-- #jds為json所有資料 i則是現在建立用來遞迴的變數 -->
+            <tr>
+                <td class="place">{{i.animal_place}}</td> <!-- #Django Template 語言 使用'.' dict of items -->
+                <!--<td>{{i.animal_kind}}</td>-->
+                <td class="sex">{{i.animal_sex}}</td>
+                <!--<td>{{i.animal_bodytype}}</td>-->
+                <!--<td>{{i.animal_age}}</td>-->
+                <td class="img"><a href="/animal/{{i.animal_id}}" target="_blank"><img src="{{i.album_file}}"
+                            class="rounded-3 infomation" style="object-fit:cover;"></a></td>
+                <td class="update">{{i.animal_update}}</td>
+                <td class="shelter_name">{{i.shelter_name}}</td>
+                <td class="shelter_address">{{i.shelter_address}}</td>
+                <td class="shelter_tel">{{i.shelter_tel}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <br>
+    <h3>
+        <div class="pagefunction">
+            {% if currentpage > 1 %}
+            <a class="btn pagechange" href="/animalpage/1/" title="上一頁">上一頁</a>
+            {% endif %}
+            　　-- {{currentpage}} --　　
+            {% if currentpage < totpage %} <a class="btn pagechange" href="/animalpage/2/" title="下一頁">下一頁</a>
+                {% endif %}
+        </div>
+    </h3>
+    {% endblock %}
+</body>
+
+</html>
