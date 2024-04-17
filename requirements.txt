@@ -11,7 +11,7 @@ colorama==0.4.6
 crashtest==0.4.1
 cryptography==41.0.7
 distlib==0.3.7
-Django==4.2.7
+Django==4.2.11
 dulwich==0.21.7
 fastjsonschema==2.19.0
 filelock==3.13.1
