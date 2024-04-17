@@ -47,4 +47,4 @@ urllib3==2.1.0
 virtualenv==20.25.0
 wheel==0.41.2
 whitenoise==6.6.0
-gunicorn==21.0.1
+gunicorn==22.0.0
