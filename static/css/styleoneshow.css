@@ -1,294 +1,232 @@
-/* default */
-*{font-family:'Aoboshi One', serif,'Noto Sans TC', sans-serif;box-sizing:border-box;}
-.logo {color: #956e92d5;margin: 15px;font-weight: bolder;width: 36px;height: 36px;}
-/* card area */
-.cardimg {width: 1200px;height: 1000px;object-fit: cover;border-radius: 15px;text-align: center;margin: 40px;}
-.type {color: #e4e4e4;font-size: 1.5rem;max-width: fit-content;text-align: center;}
-.broad {background-color: #333333;text-align:center ;border: groove 5px black;border-radius: 24px;}
-.card-body{margin: 0px;}
-/*change pages btn area */
-.pagefunction {text-align: center;font-size: 1.6rem;}
-.pagechange {border-radius: 10px;border:double 3px rgb(214, 99, 99);color: rgb(212, 70, 70);font-size: 1.2rem;}
-.pagechange:hover {background-color: #333333;color: #e0e0e0;border:solid #e0e0e0;transition: ease-out 0.5s;}
-/* img on list */
-.information{width: 150px;height: 150px;}
-.img {width: 150px;height: 150px;object-fit: cover;}
-.img:hover {cursor: pointer;}
-/* flexbox in animalpage */
-.row{display: flex;flex-direction: row;flex-wrap: wrap;border: groove 5px black;border-radius: 10px;margin:5px;padding: 10px 0px;background-color: #333333;color: #e0e0e0;}
-.column{flex: 100%;flex-wrap: nowrap;width: 100%;margin: 0px 5px 0px 5px;}
-.column div {display: inline-block;border: groove 5px black;border-radius: 5px;align-items: center;vertical-align: middle;text-align: center;}
-/* data title */
-.title-place{width: 250px;}
-.title-sex{width: 70px;}
-.title-information{width: 200px;}
-.title-update{width: 120px;}
-.title-shelter_name{width: 250px;}
-.title-shelter_address{width: 350px;}
-.title-shelter_tel{width: 170px;}
-/* data area */
-.place{width: 250px;}
-.sex{width: 70px;}
-.information{width: 200px;height: 200px;vertical-align: middle;text-align: center;padding: 1px;}
-.img{width: 170px;height: 170px;border-radius: 15px;}
-.update{width: 120px;}
-.shelter_name{width: 250px;}
-.shelter_address{width: 350px;height: 200px;display: flex;justify-content: center;align-items: center; line-height: 50px;}
-.shelter_tel{width: 170px;}
+/*
+  Modernized UI for homelessanimal
+  - softer palette
+  - responsive grid layout
+  - cleaner cards and hover states
+  - mobile-friendly table layout
+*/
 
-.data{height:200px;line-height: 185px;}/* vertical-align */
-
-/* media */
-@media (max-width:1280px){
-    *{font-size: 1.0rem;}
-    div .title-place{display: none;}
-    .title-sex{width: 60px;}
-    .title-information{width: 250px;}
-    .title-update{width: 130px;}
-    .title-shelter_name{width: 210px;}
-    div .title-shelter_address{width: 340px;}
-    .title-shelter_tel{width: 180px;}
-
-    div .place {display: none;}
-    .sex{width: 60px;}
-    .information {width:250px;height: 250px;}
-    .img {width: 240px;height: 240px;}
-    .update{width: 130px;line-height:normal;}
-    .shelter_name{width: 210px;}
-    div .shelter_address{width: 340px;height: 250px;line-height: 90px;}
-    div .shelter_tel{width: 180px;}
-    .data{height: 250px;line-height: 220px;}
-    /* card area */
-    .cardimg {width: 1000px;height: 900px;border-radius: 10px;text-align: center;margin: 50px;}
-    .type {font-size: 1.3rem;}
-    .card-body{margin: 60px;}
-}
-@media (max-width:1024px){
-    *{font-size: 1.1rem;}
-    div .title-place{display: none;}
-    .title-sex{width: 70px;}
-    .title-information{width: 220px;}
-    .title-update{width: 160px;}
-    .title-shelter_name{width: 270px;}
-    div .title-shelter_address{display: none;}
-    .title-shelter_tel{width: 175px;}
-    .sex{width: 70px;}
-    .information {width:220px;height: 220px;}
-    .img {width: 210px;height: 210px;}
-    .update{width: 160px;line-height:normal;}
-    .shelter_name{width: 270px;}
-    div .place {display: none;}
-    div .shelter_address{display: none;}
-    div .shelter_tel{width: 175px;}
-    .data{height: 220px;line-height: 195px;}
-    /* card area */
-    .cardimg {width: 900px;height: 800px;border-radius: 10px;text-align: center;margin: 12px;}
-    .type {font-size: 1.5rem;text-align: left;}
-    .card-body{margin: 0px;}
-}
-@media (max-width:920px){
-    *{font-size: 1.0rem;}
-    div .title-place{display: none;}
-    .title-sex{width: 70px;}
-    .title-information{width: 220px;}
-    .title-update{width: 150px;}
-    .title-shelter_name{width: 230px;}
-    div .title-shelter_address{display: none;}
-    .title-shelter_tel{width: 140px;}
-
-    .information {width:220px;height: 220px;}
-    .img {width: 210px;height: 210px;}
-    .update{width: 150px;line-height:normal;}
-    .shelter_name{width: 230px;}
-    div .place {display: none;}
-    div .shelter_address{display: none;}
-    div .shelter_tel{width: 140px;}
-    .data{height: 220px;line-height: 195px;}
-    /* card area */
-    .cardimg {width: 850px;height: 700px;border-radius: 10px;text-align: center;margin: 14px;}
-    .type {font-size: 1.5rem;text-align:left;}
-    .card-body{margin: 0px;}
-}
-@media (max-width:850px){
-    *{font-size: 1.1rem;}
-    div .title-place{display: none;}
-    .title-sex{width: 70px;}
-    .title-information{width: 240px;}
-    .title-update{width: 140px;}
-    .title-shelter_name{width: 255px;}
-    div .title-shelter_address{display: none;}
-    div .title-shelter_tel{display: none;}
-
-    .information {width:240px;height: 240px;}
-    .img {width: 230px;height: 230px;}
-    .update{width: 140px;line-height:normal;}
-    div .place {display: none;}
-    .shelter_name{width: 255px;}
-    div .shelter_address{display: none;}
-    div .shelter_tel{display: none;}
-    .data{height: 240px;line-height: 220px;}
-    /* card area */
-    .cardimg {width: 740px;height: 600px;border-radius: 10px;text-align: center;margin: 14px;}
-    .type {font-size: 1.3rem;text-align: left;}
-    .card-body{margin: 0px;}
-}
-@media (max-width:780px){
-    *{font-size: 1.1rem;}
-    div .title-place{display: none;}
-    .title-sex{width: 70px;}
-    .title-information{width: 200px;}
-    .title-update{width: 140px;}
-    .title-shelter_name{width: 250px;}
-    div .title-shelter_address{display: none;}
-    div .title-shelter_tel{display: none;}
-
-    .information {width:200px;height: 200px;}
-    .img {width: 190px;height: 190px;}
-    .update{width: 140px;line-height:normal;}
-    div .place {display: none;}
-    .shelter_name{width: 250px;}
-    div .shelter_address{display: none;}
-    div .shelter_tel{display: none;}
-    .data{height: 200px;line-height: 185px;}
-    /* card area */
-    .cardimg {width: 700px;height: 600px;border-radius: 10px;text-align: center;margin: 15px;}
-    .type {font-size: 1.3rem;text-align: left;}
-    .card-body{margin: 0px;}
-}
-@media (max-width:550px){
-    *{font-size: 1.2rem;}
-    div .title-place{display: none;}
-    .title-sex{width: 70px;}
-    .title-information{width: 200px;}
-    .title-update{width: 160px;}
-    div .title-shelter_name{display: none;}
-    div .title-shelter_address{display: none;}
-    div .title-shelter_tel{display: none;}
-
-    .information {width:200px;height: 200px;}
-    .img {width: 190px;height: 190px;}
-    .update{width: 160px;line-height:normal;}
-    div .place {display: none;}
-    div .shelter_name{display: none;}
-    div .shelter_address{display: none;}
-    div .shelter_tel{display: none;}
-    .data{height: 200px;line-height: 180px;}
-    /* card area */
-    .cardimg {width: 480px;height: 430px;border-radius: 10px;text-align: center;margin: 10px;}
-    .type {font-size: 1.0rem;text-align: left;}
-    .card-body{margin: 0px;}
-}
-@media (max-width:450px){
-    div .row{flex-direction: column;flex-wrap: nowrap;padding: 10px 0px;margin: 0px;}
-    div .column{flex-wrap: wrap;width: 100%;}
-    div .title{display:none;}
-    div .place {display: none;}
-    div .sex {display: none;}
-    .information {width:360px;height: 360px;}
-    .img {width: 350px;height: 350px;}
-    .update{width: 360px;height:40px;line-height:normal;}
-    div .shelter_name{display: none;}
-    div .shelter_address{display: none;}
-    div .shelter_tel{display: none;}
-    .data{display: none;}
-    /* card area */
-    .cardimg {width: 370px;height: 350px;border-radius: 10px;text-align: center;margin: 10px;}
-    .type {font-size: 1.0rem;text-align: left;}
-    .card-body{margin: 0px;}
-}
-@media (max-width:420px){
-    div .row{flex-direction: column;flex-wrap: nowrap;padding: 10px 0px;margin: 0px;}
-    div .column{flex-wrap: wrap;width: 100%;}
-    div .title{display:none;}
-    div .place {display: none;}
-    div .sex {display: none;}
-    .information {width:340px;height: 340px;}
-    .img {width: 330px;height: 330px;}
-    .update{width: 340px;height:40px;line-height:normal;font-size: 1.0rem;}
-    div .shelter_name{display: none;}
-    div .shelter_address{display: none;}
-    div .shelter_tel{display: none;}
-    .data{display: none;}
-    /* card area */
-    .cardimg {width: 350px;height: 300px;border-radius: 10px;text-align: center;margin: 12px;}
-    .type {font-size: 1.2rem;text-align: left;}
-    .card-body{margin: 0px;}
-}
-@media (max-width:400px){
-    div .row{flex-direction: column;flex-wrap: nowrap;padding: 10px 0px;margin: 0px;}
-    div .column{flex-wrap: wrap;width: 100%;}
-    div .title{display:none;}
-    div .place {display: none;}
-    div .sex {display: none;}
-    .information {width:320px;height: 320px;}
-    .img {width: 310px;height: 310px;}
-    .update{width: 320px;height:40px;line-height:normal;font-size: 1.0rem;}
-    div .shelter_name{display: none;}
-    div .shelter_address{display: none;}
-    div .shelter_tel{display: none;}
-    .data{display: none;}
-    /* card area */
-    .cardimg {width: 320px;height: 320px;border-radius: 10px;text-align: center;margin: 14px;}
-    .type {font-size: 1.0rem;text-align: left;}
-    .card-body{margin: 0px;}
-}
-@media (max-width:380px){
-    div .row{flex-direction: column;flex-wrap: nowrap;padding: 10px 0px;margin: 0px;}
-    div .column{flex-wrap: wrap;width: 100%;}
-    div .title{display:none;}
-    div .place {display: none;}
-    div .sex {display: none;}
-    .information {width:300px;height: 300px;}
-    .img {width: 290px;height: 290px;}
-    .update{width: 300px;height:40px;line-height:normal;}
-    div .shelter_name{display: none;}
-    div .shelter_address{display: none;}
-    div .shelter_tel{display: none;}
-    .data{display: none;}
-    /* card area */
-    .cardimg {width: 320px;height: 320px;border-radius: 10px;text-align: center;margin: 9px;}
-    .type {font-size: 0.9rem;text-align: left;}
-    .card-body{margin: 0px;}
-}
-@media (max-width:360px){
-    div .row{flex-direction: column;flex-wrap: nowrap;padding: 10px 0px;margin: 0px;}
-    div .column{flex-wrap: wrap;width: 100%;}
-    div .title{display:none;}
-    div .place {display: none;}
-    div .sex {display: none;}
-    .information {width:290px;height: 290px;}
-    .img {width: 280px;height: 280px;}
-    .update{width: 290px;height:40px;line-height:normal;}
-    div .shelter_name{display: none;}
-    div .shelter_address{display: none;}
-    div .shelter_tel{display: none;}
-    .data{display: none;}
-    /* card area */
-    .cardimg {width: 300px;height: 300px;border-radius: 10px;text-align: center;margin: 12px;}
-    .type {font-size: 0.9rem;text-align: left;}
-    .card-body{margin: 0px;}
-}
-@media (max-width:290px){
-    /* logo */
-    .logo{margin: 0px;}
-    /* flex */
-    div .row{flex-direction: column;flex-wrap: nowrap;padding: 10px 0px;margin: 0px;}
-    div .column{flex-wrap: wrap;width: 100%;}
-    /* title */
-    div .title{display:none;}
-    div .place {display: none;}
-    div .sex {display: none;}
-    .information {width:200px;height: 200px;}
-    .img {width: 190px;height: 190px;}
-    .update{width: 200px;height:40px;line-height:normal;}
-    /* data */
-    div .shelter_name{display: none;}
-    div .shelter_address{display: none;}
-    div .shelter_tel{display: none;}
-    .data{display: none;}
-    /* card area */
-    .cardimg {width: 220px;height: 220px;border-radius: 10px;text-align: center;margin: 12px;}
-    .type {font-size: 0.8rem;text-align:left;}
-    .card-body{margin: 0px;}
+:root {
+  --bg: #f7f4f1;
+  --panel: #ffffff;
+  --panel-alt: #f1e5dc;
+  --primary: #ae5d4b;
+  --primary-dark: #7f3b31;
+  --text: #2c2a2b;
+  --muted: #6e6968;
+  --border: rgba(44, 42, 43, 0.08);
+  --shadow: 0 12px 28px rgba(33, 25, 22, 0.08);
 }
 
+* {
+  box-sizing: border-box;
+  font-family: 'Aoboshi One', serif, 'Noto Sans TC', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #faf7f5 0%, #f2ece7 100%);
+  color: var(--text);
+}
+
+header {
+  background: linear-gradient(135deg, #fffaf5 0%, #f4e8df 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  background: transparent !important;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  color: var(--primary-dark);
+  font-weight: 800;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+}
+
+.logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.container-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1.6fr 1.2fr 1.7fr 2.2fr 1.4fr;
+  gap: 12px;
+  align-items: stretch;
+  border: none;
+  border-radius: 22px;
+  padding: 12px;
+  margin: 0;
+}
+
+.column {
+  display: contents;
+}
+
+.title,
+.place,
+.sex,
+.information,
+.update,
+.shelter_name,
+.shelter_address,
+.shelter_tel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  min-height: 120px;
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text);
+}
+
+.title {
+  background: var(--panel-alt);
+  color: var(--primary-dark);
+  font-weight: 700;
+  min-height: auto;
+  padding: 10px 12px;
+}
+
+.information {
+  padding: 8px;
+}
+
+.img {
+  width: 100%;
+  max-width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+
+.img:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.shelter_address {
+  line-height: 1.7;
+}
+
+.pagefunction {
+  text-align: center;
+  margin: 28px 0 10px;
+  font-size: 1.4rem;
+  color: var(--primary-dark);
+}
+
+.pagechange {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.3rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 20px rgba(174, 93, 75, 0.2);
+}
+
+.pagechange:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+.broad {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.card-body {
+  margin: 0;
+}
+
+/* Generic clean style for list pages */
+.table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+}
+
+.table-dark {
+  background: transparent;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > td {
+  border: none;
+  vertical-align: middle;
+}
+
+.table tbody tr {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow);
+}
+
+.table tbody td {
+  padding: 12px 10px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.table tbody td:first-child {
+  border-left: 1px solid var(--border);
+  border-radius: 12px 0 0 12px;
+}
+
+.table tbody td:last-child {
+  border-right: 1px solid var(--border);
+  border-radius: 0 12px 12px 0;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .place,
+  .sex,
+  .update,
+  .shelter_name,
+  .shelter_tel,
+  .shelter_address,
+  .information {
+    min-height: 90px;
+  }
+
+  .img {
+    max-width: 100%;
+    height: 220px;
+  }
+}
